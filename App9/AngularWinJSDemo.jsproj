@@ -68,6 +68,7 @@
     <Content Include="js\lib\Angular\angular-resource.js" />
     <Content Include="js\lib\Angular\angular-route.js" />
     <Content Include="js\lib\Angular\angular.js" />
+    <Content Include="js\services\patternService.js" />
     <None Include="App9_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

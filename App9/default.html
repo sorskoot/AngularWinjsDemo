@@ -16,8 +16,15 @@
     <script src="js/config.js"></script>
     <script src="/js/default.js"></script>
     <script src="js/controllers/mainController.js"></script>
+    <script src="js/services/patternService.js"></script>
+    
 </head>
 <body ng-controller="main">
-    <h1>{{hello}}</h1>
+   <ul>
+       <li ng-repeat="item in data">
+           <div>{{item.title}}</div>
+           <img ng-src="{{item.imageUrl}}" width="50"/>
+       </li>
+   </ul>
 </body>
 </html>
