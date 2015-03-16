@@ -1,6 +1,6 @@
 ﻿var appConfig = (function () {
     var appName = 'myApp';
-    var dependencies = [];
+    var dependencies = ['winjs'];
 
     return {
         appName: appName,

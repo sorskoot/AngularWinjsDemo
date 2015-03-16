@@ -10,6 +10,7 @@
     <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
     <script src="js/lib/Angular/angular.js"></script>
     <link href="js/lib/Angular/angular-csp.css" rel="stylesheet" />
+    <script src="js/lib/angular-winjs.js"></script>
 
     <!-- App9 references -->
     <link href="/css/default.css" rel="stylesheet" />
@@ -20,11 +21,13 @@
     
 </head>
 <body ng-controller="main">
-   <ul>
-       <li ng-repeat="item in data">
-           <div>{{item.title}}</div>
-           <img ng-src="{{item.imageUrl}}" width="50"/>
-       </li>
-   </ul>
+   <win-list-view item-data-source="data" style="height:100%">
+       <win-item-template>
+           <div style="margin:25px">
+               <img ng-src="{{item.data.imageUrl}}" width="160"/>
+               <div>{{item.data.title}}</div>
+           </div>
+       </win-item-template>
+   </win-list-view>
 </body>
 </html>
