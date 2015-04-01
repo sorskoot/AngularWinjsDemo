@@ -1,10 +1,11 @@
-﻿(function () {
+﻿
+(function () {
+    angular.module(appConfig.appName).controller("mainController", mainController);
 
-    angular.module(appConfig.appName).controller("main",
-            function ($scope, patternService) {
-                patternService.getPatterns().then(function (result) {
-                    $scope.data = result;
-                })
-    });
-
+    function mainController($scope, patternService) {
+        var vm = this;
+        patternService.getPatterns().then(function (result) {
+            vm.data = result;
+        })
+    };    
 })();

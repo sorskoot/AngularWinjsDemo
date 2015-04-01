@@ -6,22 +6,12 @@
 
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
-    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
-    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
-    <script src="js/lib/Angular/angular.js"></script>
-    <link href="js/lib/Angular/angular-csp.css" rel="stylesheet" />
-    <script src="js/lib/angular-winjs.js"></script>
-
-    <!-- App9 references -->
     <link href="/css/default.css" rel="stylesheet" />
-    <script src="js/config.js"></script>
-    <script src="/js/default.js"></script>
-    <script src="js/controllers/mainController.js"></script>
-    <script src="js/services/patternService.js"></script>
+    <link href="js/lib/Angular/angular-csp.css" rel="stylesheet" />
     
 </head>
-<body ng-controller="main">
-   <win-list-view item-data-source="data" style="height:100%">
+<body ng-controller="mainController as main">
+   <win-list-view item-data-source="main.data" style="height:100%">
        <win-item-template>
            <div style="margin:25px">
                <img ng-src="{{item.data.imageUrl}}" width="160"/>
@@ -29,5 +19,15 @@
            </div>
        </win-item-template>
    </win-list-view>
+
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+    <script src="/js/lib/Angular/angular.js"></script>
+    <script src="/js/lib/angular-winjs.js"></script>
+
+    <script src="/js/config.js"></script>
+    <script src="/js/default.js"></script>
+    <script src="/js/controllers/mainController.js"></script>
+    <script src="/js/services/patternService.js"></script>
 </body>
 </html>
