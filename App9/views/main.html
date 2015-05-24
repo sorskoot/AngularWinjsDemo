@@ -1,0 +1,22 @@
+﻿<div class="fragment">
+    <header aria-label="Header content" role="banner">
+        <h1 class="titlearea win-type-ellipsis">
+            <span class="pagetitle"><strong>COLOUR</strong>lovers</span>
+        </h1>
+    </header>
+
+    <section role="main">
+
+        <win-list-view item-data-source=" main.data">
+            <win-item-template>
+                <!--<a href="/details/{{item.data.id}}">-->
+
+                <div style="margin:25px" ng-click="main.click(item.data.id)">
+                    <img ng-src="{{item.data.imageUrl}}" width="160" />
+                    <div>{{item.data.title}}</div>
+                </div>
+                <!--</a>-->
+            </win-item-template>
+        </win-list-view>
+        </section>
+</div>

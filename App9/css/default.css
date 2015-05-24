@@ -1,2 +1,149 @@
-﻿body {
+﻿.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 128px 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment header[role=banner] {
+        /* Define a grid with columns for the back button and page title. */
+        display: -ms-grid;
+        -ms-grid-columns: 39px 81px 1fr;
+        -ms-grid-rows: 1fr;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            -ms-grid-column: 2;
+            margin-top: 59px;
+        }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 3;
+            margin-top: 37px;
+        }
+
+            .fragment header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+            }
+
+    .fragment section[role=main] {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+
+.win-listview {
+  overflow: hidden;
+  height: 100%;
+}
+.content,
+#app {
+    height: 100%;
+}
+
+    /* SplitView pane content style*/
+    #app .header {
+        white-space: nowrap;
+    }
+
+    #app .title {
+        font-size: 25px;
+        left: 50px;
+        margin-top: 6px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    #app .nav-commands {
+        margin-top: 20px;
+    }
+
+
+    /*SplitView pane style for different screen sizes*/
+    #app .large .win-splitview-content .win-splitview-button {
+        display: none;
+    }
+
+    #app .medium .win-splitview-content .win-splitview-button {
+        display: none;
+    }
+
+    /*SplitView content style*/
+    #app .win-splitview-content {
+        background-color: rgb(112,112,112);
+    }
+
+    #app .contenttext {
+        margin-left: 20px;
+        margin-top: 6px;
+    }
+
+.win-navbarcommand-button {
+    background-color: transparent;
+}
+
+#app .win-splitview-pane-hidden .win-navbarcommand-button {
+    width: 46px;
+}
+
+#app .win-splitview-pane-hidden .win-navbarcommand-label {
+    /* Workaround: Make sure pane doesn't scroll if ContentDialog restores focus to
+       NavBarCommand's label
+    */
+    visibility: hidden;
+}
+
+/*SplitView content style*/
+#app .win-splitview-content {
+    background-color: rgb(112,112,112);
+}
+
+#app .contenttext {
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+/*SplitView pane show button style*/
+button.win-splitview-button {
+    float: left;
+    box-sizing: border-box;
+    height: 48px;
+    width: 48px;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    border: 1px dotted transparent;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+}
+
+html.win-hoverable button.win-splitview-button:hover {
+    background-color: rgba(255,255,255, 0.1);
+}
+
+button.win-splitview-button.win-splitview-button:active,
+button.win-splitview-button.win-splitview-button:hover:active {
+    background-color: rgba(255,255,255, 0.2);
+}
+
+button.win-splitview-button.win-keyboard:focus {
+    border-color: rgb(255, 255, 255);
+}
+
+button.win-splitview-button:after {
+    font-size: 24px;
+    font-family: 'Segoe MDL2 Assets', 'Symbols';
+    content: "\E700";
 }

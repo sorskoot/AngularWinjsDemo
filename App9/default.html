@@ -5,29 +5,56 @@
     <title>App9</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+
+    <link href="css/ui-dark.css" rel="stylesheet" />
     <link href="/css/default.css" rel="stylesheet" />
     <link href="js/lib/Angular/angular-csp.css" rel="stylesheet" />
-    
+    <script src="js/lib/winjs/WinJS.js"></script>
+
+    <script src="js/lib/Angular/angular.js"></script>
+    <script src="js/lib/Angular/angular-route.js"></script>
+    <script src="js/lib/angular-winjs.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/default.js"></script>
+    <script src="js/controllers/colorsMainController.js"></script>
+    <script src="js/controllers/detailsController.js"></script>
+    <script src="js/controllers/shellController.js"></script>
+    <script src="js/controllers/palettesMainController.js"></script>
+    <script src="js/controllers/patternsMainController.js"></script>
+
+    <script src="js/services/colourLoversAPI.Service.js"></script>
+    <script src="js/routeConfig.js"></script>
+    <script src="js/services/AdapterService.js"></script>
+    <script src="js/services/NavigationService.js"></script>
 </head>
-<body ng-controller="mainController as main">
-   <win-list-view item-data-source="main.data" style="height:100%">
-       <win-item-template>
-           <div style="margin:25px">
-               <img ng-src="{{item.data.imageUrl}}" width="160"/>
-               <div>{{item.data.title}}</div>
-           </div>
-       </win-item-template>
-   </win-list-view>
-
-    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
-    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
-    <script src="/js/lib/Angular/angular.js"></script>
-    <script src="/js/lib/angular-winjs.js"></script>
-
-    <script src="/js/config.js"></script>
-    <script src="/js/default.js"></script>
-    <script src="/js/controllers/mainController.js"></script>
-    <script src="/js/services/patternService.js"></script>
+<body id="app" ng-controller="shellController as shell">
+    <div class="full-height">
+        <win-split-view ng-class="shell.class"
+                        pane-hidden="shell.paneHidden"
+                        shown-display-mode="shell.shownDisplayMode"
+                        hidden-display-mode="shell.hiddenDisplayMode">
+            <win-split-view-pane>
+                <div>
+                    <div class="header">
+                        <button type="button" class="win-splitview-button" ng-click="shell.togglePane();"></button>
+                        <div class="title">COLOURLovers Menu</div>
+                    </div>
+                    <div class="nav-commands">
+                        <win-nav-bar-command ng-click="shell.navigateToColors()" label="'colors'" icon="'url(images/colorpicker.png)'"></win-nav-bar-command>
+                        <win-nav-bar-command ng-click="shell.navigateToPalettes()" label="'palettes'" icon="'url(images/palette.png)'"></win-nav-bar-command>
+                        <win-nav-bar-command ng-click="shell.navigateToPatterns()" label="'patterns'" icon="'url(images/nuclear.png)'"></win-nav-bar-command>
+                    </div>
+                </div>
+            </win-split-view-pane>
+            <win-split-view-content style="height:100%">
+                <button type="button" class="win-splitview-button" ng-click="shell.togglePane();"></button>
+                <div class="contenttext full-height">
+                    <ng-view>
+                    </ng-view>
+                </div>
+            </win-split-view-content>
+        </win-split-view>
+    </div>
 </body>
 </html>

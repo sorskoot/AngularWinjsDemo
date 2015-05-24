@@ -11,7 +11,7 @@
     app.onactivated = function (args) {
 
         angular.bootstrap(document, [appConfig.appName]);
-
+        
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize
@@ -20,7 +20,9 @@
                 // TODO: This application has been reactivated from suspension.
                 // Restore application state here.
             }
-            args.setPromise(WinJS.UI.processAll());
+            args.setPromise(WinJS.UI.processAll().then(function(){
+                
+            }));
         }
     };
 
