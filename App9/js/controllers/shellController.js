@@ -1,7 +1,7 @@
 ﻿(function () {
     angular.module(appConfig.appName).controller("shellController", shellController);
 
-    function shellController($location, navigationService) {
+    function shellController($location, $rootScope, navigationService) {
         var vm = this;
         vm.paneHidden = true;
         vm.menuMode = mode.medium;
@@ -11,6 +11,7 @@
         vm.navigateToPatterns = navigateToPatterns;
 
         initUpdateSplitView();
+        //$rootScope.$on('$routeChangeEnd', initUpdateSplitView);
 
         /////////////////
         function navigateToColors() {

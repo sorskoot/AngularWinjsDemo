@@ -41,7 +41,7 @@
         self.getColorById = function (id) {
             return new WinJS.Promise(
                   function (complete, error) {
-                      return self.http.get('http://www.colourlovers.com/api/colors/' + id + '?format=json')
+                      return self.http.get('http://www.colourlovers.com/api/color/' + id + '?format=json')
                             .success(function (e) {
                                 complete(e);
                             });
@@ -71,7 +71,7 @@
             getColors: self.getColors,
             getPalettes: self.getPalettes,
             getPatternById: self.getPatternById,
-            getColorsById: self.getColorsById,
+            getColorById: self.getColorById,
             getPaletteById: self.getPaletteById
         }
     };

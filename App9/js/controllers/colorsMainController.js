@@ -6,9 +6,8 @@
     function colorsMainController($location, colourLoversAPI, navigationService) {
         var vm = this;
 
-        vm.click = function (id) {
-            vm.selected = "clicked on:" + id;
-            $location.path('/details/' + id);
+        vm.click = function (color) {
+            $location.path('/colorDetails/' + color.hex);
         }
 
         colourLoversAPI.getColors().then(function (result) {

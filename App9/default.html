@@ -7,9 +7,11 @@
     <!-- WinJS references -->
 
     <link href="css/ui-dark.css" rel="stylesheet" />
+    <link href="css/mscom-grid.css" rel="stylesheet" />
     <link href="/css/default.css" rel="stylesheet" />
     <link href="js/lib/Angular/angular-csp.css" rel="stylesheet" />
     <script src="js/lib/winjs/WinJS.js"></script>
+    <script src="js/lib/moment.js"></script>
 
     <script src="js/lib/Angular/angular.js"></script>
     <script src="js/lib/Angular/angular-route.js"></script>
@@ -18,12 +20,19 @@
     <script src="js/config.js"></script>
     <script src="js/default.js"></script>
     <script src="js/controllers/colorsMainController.js"></script>
-    <script src="js/controllers/detailsController.js"></script>
+    <script src="js/controllers/colorDetailsController.js"></script>
     <script src="js/controllers/shellController.js"></script>
     <script src="js/controllers/palettesMainController.js"></script>
     <script src="js/controllers/patternsMainController.js"></script>
 
     <script src="js/services/colourLoversAPI.Service.js"></script>
+
+    <script src="js/filters/ttDate.filter.js"></script>
+    <script src="js/filters/ttFromNow.filter.js"></script>
+    <!--<script src="js/filters/fixcolor.filter.js"></script>-->
+
+    <script src="js/directives/colorbar.directive.js"></script>
+
     <script src="js/routeConfig.js"></script>
     <script src="js/services/AdapterService.js"></script>
     <script src="js/services/NavigationService.js"></script>
