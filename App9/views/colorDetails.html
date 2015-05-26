@@ -1,5 +1,7 @@
 ﻿<div class="fragment">
+
     <header aria-label="Header content" role="banner">
+        <tt-back-button></tt-back-button>
         <h1 class="titlearea win-type-ellipsis">
             <span class="pagetitle"><strong>COLOUR</strong>lovers</span>
         </h1>
@@ -14,49 +16,36 @@
         </div>
         <!--<tt-color-bar color="color.data.hex | ttFixColor"></tt-color-bar>-->
         <!--<div ng-style="{'background-color':{{color.data.hex | ttFixColor}}}" style="height:100px">{{color.data.hex}}</div>-->
-        <img ng-src="{{color.data.imageUrl}}" width="160" />
-        <span>{{color.data.description}}</span>
-
-        <span>{{color.data.numViews}}</span>
+        <div class="ms-row">
+            <span class="col-1-8 preceding-col-1-8 nb label">&nbsp;</span>
+            <div class="col-6-8">
+                <img ng-src="{{color.data.imageUrl}}" width="160" />
+            </div>
+        </div>
+        <div class="ms-row">
+            <span class="col-1-8 preceding-col-1-8 nb label">&nbsp;</span>
+            <div class="col-6-8">
+                <win-rating disabled="true" average-rating="color.data.numHearts"></win-rating>
+            </div>
+        </div>
+        <div class="ms-row">
+            <span class="col-1-8 preceding-col-1-8 nb label">Description:</span>
+            <span class="col-6-8">{{color.data.description}}</span>
+        </div>
+        <div class="ms-row">
+            <span class="col-1-8 preceding-col-1-8 nb label">Hex:</span>
+            <h3 class="col-6-8">{{color.data.hex | ttFixColor}}</h3>
+        </div>
+        <!--<span>{{color.data.numViews}}</span>
         <span>{{color.data.numVotes}}</span>
         <span>{{color.data.numComments}}</span>
-        <span>{{color.data.rank}}</span>
-
-        <span>{{color.data.hex}}</span>
-        <span>{{color.data.rgb.red}}</span>
+        <span>{{color.data.rank}}</span>-->
+        <!--<span>{{color.data.rgb.red}}</span>
         <span>{{color.data.rgb.green}}</span>
         <span>{{color.data.rgb.blue}}</span>
         <span>{{color.data.hsv.h}}</span>
         <span>{{color.data.imageUrl}}</span>
         <span>{{color.data.badgeUrl}}</span>
-        <span>{{color.data.apiUrl}}</span>
-        <win-rating disabled="true" average-rating="color.data.numHearts"></win-rating>
+        <span>{{color.data.apiUrl}}</span>-->
     </section>
 </div>
-
-<!--
-    id Unique id for this Color
-title Title / Name of the Color CDATA
-userName Username of the Color's creator CDATA
-numViews Number of views this Color has received
-numVotes Number of votes this Color has received
-numComments Number of comments this Color has received
-numHearts Number of hearts this Color has
-rank This Color's rank on COLOURlovers.com
-dateCreated Date this Color was created
-hex This Color's hex value
-rgb RGB breakdown of this Color
-     red Red value
-     green Green value
-     blue Blue value
-hsv HSV breakdown of this color
-     hue Hue value
-     saturation Saturation value
-     value Value / Balance value
-description This Color's description CDATA
-url This Color's COLOURlovers.com URL CDATA
-imageUrl Link to a png version of this Color CDATA
-badgeUrl Link to a COLOURlovers.com badge for this Color CDATA
-apiUrl This Color's COLOURlovers.com API URL CDATA
-
--->

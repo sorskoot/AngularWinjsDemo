@@ -5,26 +5,35 @@
 .full-width {
     width: 100%;
 }
-.win-star.win-average,
-.win-star.win-disabled.win-full  {
-   background-color: red; 
-   content:"\E700"
-}
-.win-type-heavy{
-    font-weight:900;
-}
-.win-type-light{
+
+.label{
+    text-align:right;
     font-weight:100;
+    font-size:.9em;
 }
-.win-type-medium{
-    font-weight:400;
+.win-rating .win-star.win-average.win-full, .win-rating .win-star.win-average.win-full.win-disabled{
+    color: rgba(216, 172, 10, 1.0);
 }
+
+.win-type-heavy {
+    font-weight: 900;
+}
+
+.win-type-light {
+    font-weight: 100;
+}
+
+.win-type-medium {
+    font-weight: 400;
+}
+
 .win-type-xxx-large {
-  font-size: 80px;
-  font-weight: 200;
-  line-height: 1.216;
-  letter-spacing: 0px;
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 1.216;
+    letter-spacing: 0px;
 }
+
 .fragment {
     /* Define a grid with rows for a banner and a body */
     display: -ms-grid;
@@ -63,9 +72,10 @@
 
 
 .win-listview {
-  overflow: hidden;
-  height: 100%;
+    overflow: hidden;
+    height: 100%;
 }
+
 .content,
 #app {
     height: 100%;

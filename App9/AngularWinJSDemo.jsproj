@@ -68,6 +68,7 @@
     <Content Include="js\controllers\palettesMainController.js" />
     <Content Include="js\controllers\colorDetailsController.js" />
     <Content Include="js\controllers\shellController.js" />
+    <Content Include="js\directives\backButton.directive.js" />
     <Content Include="js\directives\colorbar.directive.js" />
     <Content Include="js\directives\colorbar.template.html" />
     <Content Include="js\en-US\ui.strings.js" />
