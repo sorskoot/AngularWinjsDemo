@@ -68,6 +68,7 @@
     <Content Include="js\controllers\palettesMainController.js" />
     <Content Include="js\controllers\colorDetailsController.js" />
     <Content Include="js\controllers\shellController.js" />
+    <Content Include="js\default.alternative.js" />
     <Content Include="js\directives\backButton.directive.js" />
     <Content Include="js\directives\colorbar.directive.js" />
     <Content Include="js\directives\colorbar.template.html" />
@@ -82,6 +83,7 @@
     <Content Include="js\lib\winjs\WinJS.min.js" />
     <Content Include="js\lib\winjs\WinJS.min.js.map" />
     <Content Include="js\services\AdapterService.js" />
+    <Content Include="js\services\angular.winjs.lifecycle.js" />
     <Content Include="js\services\NavigationService.js" />
     <Content Include="views\colorDetails.html" />
     <Content Include="views\main.html" />
