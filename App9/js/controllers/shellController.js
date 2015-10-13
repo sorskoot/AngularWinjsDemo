@@ -11,7 +11,6 @@
         vm.navigateToPatterns = navigateToPatterns;
 
         initUpdateSplitView();
-        //$rootScope.$on('$routeChangeEnd', initUpdateSplitView);
 
         /////////////////
         function navigateToColors() {

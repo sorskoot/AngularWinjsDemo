@@ -22,10 +22,6 @@
               templateUrl: 'views/colorDetails.html',
               controller: 'colorDetailsController',
               controllerAs: 'color'
-              //,
-              //resolve: {
-              //    patternDetailsService: patternDetailsService
-              //}
           })          
           .otherwise({
               redirectTo: '/colorsMain'
