@@ -1,9 +1,12 @@
 ﻿(function () {
-    angular.module(appConfig.appName).controller("colorsMainController", colorsMainController);
+    angular.module(appConfig.appName)
+           .controller("colorsMainController", colorsMainController);
 
-    colorsMainController.$inject = ['$location', 'colourLoversAPI', 'navigationService'];
+    colorsMainController.$inject = ['$location', 'colourLoversAPI', 
+                                    'navigationService'];
 
-    function colorsMainController($location, colourLoversAPI, navigationService) {
+    function colorsMainController($location, colourLoversAPI, 
+                                  navigationService) {
         var vm = this;
 
         vm.click = function (color) {

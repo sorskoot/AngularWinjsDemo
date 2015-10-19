@@ -1,6 +1,5 @@
 ﻿(function () {
     angular.module(appConfig.appName).config(routeConfig);
-
     function routeConfig($routeProvider) {
         $routeProvider
           .when('/colorsMain', {
@@ -27,9 +26,4 @@
               redirectTo: '/colorsMain'
           });
     };
-
-    function patternDetailsService(patternService){
-        var a = 1;
-    }
-
 })();
